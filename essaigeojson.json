@@ -1,10 +1,12 @@
 {
+    "center": [0, 0],
+    "zoom": 0,
     "sources": {
       "essaigeojson": {
         "type": "geojson",
         "data": "https://raw.githubusercontent.com/BaptisteI/seeyoucloud/main/Essai700.geojson"
       }
-    }
+    },
   "layers": [
         {
             "id": "2021-12-11-h12-d0-alt-700-9i1k4h",
