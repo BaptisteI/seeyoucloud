@@ -2,7 +2,7 @@
     "sources": {
       "task-thermal-source": {
         "type": "geojson",
-        "data": "https://raw.githubusercontent.com/tceglar/heat/master/data/bigsample2.geojson"
+        "data": "https://github.com/BaptisteI/seeyoucloud/blob/d981ab88bd3e4b042a05f269b185fc1666522726/Essai700.geojson"
       }
     },
     "layers": [
