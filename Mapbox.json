@@ -3,7 +3,7 @@
         {
             "id": "baptistei-8ogl22rc",
             "type": "raster",
-            "source": "mapbox://baptistei.8ogl22rc",
+            "source": "https://github.com/BaptisteI/seeyoucloud/raw/main/Essai700.mbtiles",
             "layout": {},
             "paint": {"raster-opacity": 0.64}
         }
