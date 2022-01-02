@@ -1,30 +1,17 @@
 {
-    "version": 8,
-    "name": "Blank",
-    "metadata": {
-        "mapbox:autocomposite": true,
-        "mapbox:type": "template",
-        "mapbox:sdk-support": {
-            "android": "10.0.0",
-            "ios": "10.0.0",
-            "js": "2.6.0"
-        },
-        "mapbox:groups": {},
-        "mapbox:uiParadigm": "layers"
-    },
-    "center": [0, 0],
-    "zoom": 0,
     "sources": {
-        "composite": {"url": "https://github.com/BaptisteI/seeyoucloud/blob/30c25dd9bc3e575ac45788423e986d6c5d49f0ae/Essai700.geojson", "type": "vector"}
+      "task-thermal-source": {
+        "type": "vector",
+        "data": "https://raw.githubusercontent.com/BaptisteI/seeyoucloud/main/Essai700.geojson"
+      }
     },
     "layers": [
-        {
-            "id": "2021-12-11-h12-d0-alt-700-9i1k4h",
-            "type": "fill",
-            "source": "composite",
-            "source-layer": "https://github.com/BaptisteI/seeyoucloud/blob/30c25dd9bc3e575ac45788423e986d6c5d49f0ae/Essai700.geojson",
-            "paint": {
-                "fill-color": [
+      {
+      "id": "task-heatmap-layer",
+      "type": "fill",
+      "source": "task-thermal-source",
+      "paint": {
+      "fill-color": [
                     "interpolate",
                     ["linear"],
                     ["get", "DN"],
@@ -37,13 +24,12 @@
                     5,
                     "hsl(0, 98%, 42%)"
                 ],
-                "fill-opacity": ["match", ["get", "DN"], 0, 0, 0.64]
-            }
-        }
-    ],
-    "created": "2022-01-02T13:48:09.921Z",
-    "modified": "2022-01-02T14:10:28.134Z",
-    "id": "ckxxb73n10kb514l5gedjryl2",
+                "fill-opacity": ["match", ["get", "DN"], 0, 0, 1]
+      }
+      }
+    ]
+  }
+
     "owner": "baptistei",
     "visibility": "private",
     "protected": false,
