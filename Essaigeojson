@@ -2,8 +2,30 @@
     "sources": {
       "Essaigeojson": {
         "type": "geojson",
-        "data": "https://raw.githubusercontent.com/tceglar/heat/master/data/bigsample2.geojson"
+        "data": "https://raw.githubusercontent.com/BaptisteI/seeyoucloud/main/Essai700.geojson"
       }
-    },
-    
+    }
+  "layers": [
+        {
+            "id": "2021-12-11-h12-d0-alt-700-9i1k4h",
+            "type": "fill",
+            "source": "Essaigeojson",
+            "paint": {
+                "fill-color": [
+                    "interpolate",
+                    ["linear"],
+                    ["get", "DN"],
+                    -5,
+                    "hsl(242, 93%, 14%)",
+                    -1,
+                    "hsl(190, 98%, 78%)",
+                    1,
+                    "hsl(59, 98%, 56%)",
+                    5,
+                    "hsl(0, 98%, 42%)"
+                ],
+                "fill-opacity": ["match", ["get", "DN"], 0, 0, 0.64]
+            }
+        }
+    ]  
   }
