@@ -1,0 +1,22 @@
+{
+"center": [2.4976252863834816, 42.13728225844119],
+    "zoom": 8.10748108012269,
+    "bearing": 0,
+    "pitch": 0,
+"sources": {
+        "essaimbtiles": {
+            "url": "https://github.com/BaptisteI/seeyoucloud/raw/main/Essai700.mbtiles",
+            "type": "raster",
+            "tileSize": 256
+        }
+}
+   "layers": [
+        {
+            "id": "Essai",
+            "type": "raster",
+            "source": "essaimbtiles",
+            "layout": {},
+            "paint": {"raster-opacity": 0.64}
+        }
+    ]
+}
