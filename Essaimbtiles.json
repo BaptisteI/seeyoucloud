@@ -5,7 +5,7 @@
     "pitch": 0,
 "sources": {
         "essaimbtiles": {
-            "url": "https://github.com/BaptisteI/seeyoucloud/raw/main/Essai700.mbtiles",
+            "url": "https://raw.githubusercontent.com/BaptisteI/seeyoucloud/main/Essai700.mbtiles",
             "type": "raster",
             "tileSize": 256
         }
