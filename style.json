@@ -1,53 +1,62 @@
 {
-    "version": 8,
-    "name": "Blank",
-    "metadata": {
-        "mapbox:autocomposite": true,
-        "mapbox:type": "template",
-        "mapbox:sdk-support": {
-            "android": "10.0.0",
-            "ios": "10.0.0",
-            "js": "2.6.0"
-        },
-        "mapbox:groups": {},
-        "mapbox:uiParadigm": "layers"
-    },
-    "center": [0, 0],
-    "zoom": 0,
     "sources": {
-        "composite": {"url": "mapbox://baptistei.3no5etcb", "type": "vector"}
+      "task-thermal-source": {
+        "type": "geojson",
+        "data": "https://raw.githubusercontent.com/tceglar/heat/master/data/bigsample2.geojson"
+      }
     },
-    "sprite": "mapbox://sprites/baptistei/ckxxb73n10kb514l5gedjryl2/ck2u8j60r58fu0sgyxrigm3cu",
-    "glyphs": "mapbox://fonts/mapbox/{fontstack}/{range}.pbf",
     "layers": [
-        {
-            "id": "2021-12-11-h12-d0-alt-700-9i1k4h",
-            "type": "fill",
-            "source": "composite",
-            "source-layer": "2021-12-11-h12_D0_-_Alt_700-9i1k4h",
-            "paint": {
-                "fill-color": [
-                    "interpolate",
-                    ["linear"],
-                    ["get", "DN"],
-                    -5,
-                    "hsl(242, 93%, 14%)",
-                    -1,
-                    "hsl(190, 98%, 78%)",
-                    1,
-                    "hsl(59, 98%, 56%)",
-                    5,
-                    "hsl(0, 98%, 42%)"
-                ],
-                "fill-opacity": ["match", ["get", "DN"], 0, 0, 0.64]
-            }
-        }
-    ],
-    "created": "2022-01-02T13:48:09.921Z",
-    "modified": "2022-01-02T14:10:28.134Z",
-    "id": "ckxxb73n10kb514l5gedjryl2",
-    "owner": "baptistei",
-    "visibility": "private",
-    "protected": false,
-    "draft": false
-}
+      {
+      "id": "task-heatmap-layer",
+      "type": "heatmap",
+      "source": "task-thermal-source",
+      "maxzoom": 15,
+      "paint": {
+      "heatmap-weight": [
+      "interpolate",
+      ["linear"],
+      ["get", "mag"],
+      0, 0,
+      6, 1
+      ],
+      "heatmap-intensity": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      0, 1,
+      15, 1
+      ],
+      "heatmap-color": [
+      "interpolate",
+      ["linear"],
+      ["heatmap-density"],
+      0, "rgba(252,255,164,0)",
+      0.25, "rgb(252,166,12)",
+      0.5, "rgb(222,82,56)",
+      0.75, "rgb(149,38,103)",
+      1, "rgb(68,10,104)"
+      ],
+      "heatmap-radius": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      0, 0,
+      1, 1,
+      7, 1,
+      9, 6,
+      12, 11,
+      15, 25
+      ],
+      "heatmap-opacity": [
+      "interpolate",
+      ["linear"],
+      ["zoom"],
+      6, 0,
+      6.1, 0.3,
+      10, 0.6,
+      15, 0.5
+      ]
+      }
+      }
+    ]
+  }
