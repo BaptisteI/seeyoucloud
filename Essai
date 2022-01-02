@@ -24,7 +24,7 @@
                     5,
                     "hsl(0, 98%, 42%)"
                 ],
-                "fill-opacity": ["match", ["get", "DN"], 1, 1, 1]
+                "fill-opacity": ["match", ["get", "DN"], 0, 0, 1]
       }
       }
     ]
