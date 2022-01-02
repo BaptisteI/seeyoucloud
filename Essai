@@ -2,7 +2,7 @@
     "sources": {
       "task-thermal-source": {
         "type": "vector",
-        "data": "https://github.com/BaptisteI/seeyoucloud/blob/c8e3c0c8e8bbb6fe61abed78701403c45d7f46cf/Essai700.geojson"
+        "data": "https://github.com/BaptisteI/seeyoucloud/blob/c8e3c0c8e8bbb6fe61abed78701403c45d7f46cf/Essai700.json"
       }
     },
     "layers": [
@@ -10,7 +10,6 @@
       "id": "task-heatmap-layer",
       "type": "fill",
       "source": "task-thermal-source",
-      "maxzoom": 15,
       "paint": {
       "fill-color": [
                     "interpolate",
