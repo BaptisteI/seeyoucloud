@@ -1,31 +1,11 @@
 {
-    "sources": {
-      "task-thermal-source": {
-        "type": "vector",
-        "data": "https://raw.githubusercontent.com/BaptisteI/seeyoucloud/main/Essai700.geojson"
-      }
-    },
-    "layers": [
-      {
-      "id": "task-heatmap-layer",
-      "type": "fill",
-      "source": "task-thermal-source",
-      "paint": {
-      "fill-color": [
-                    "interpolate",
-                    ["linear"],
-                    ["get", "DN"],
-                    -5,
-                    "hsl(242, 93%, 14%)",
-                    -1,
-                    "hsl(190, 98%, 78%)",
-                    1,
-                    "hsl(59, 98%, 56%)",
-                    5,
-                    "hsl(0, 98%, 42%)"
-                ],
-                "fill-opacity": ["match", ["get", "DN"], 0, 0, 1]
-      }
-      }
+   "layers": [
+        {
+            "id": "baptistei-8ogl22rc",
+            "type": "raster",
+            "source": "mapbox://baptistei.8ogl22rc",
+            "layout": {},
+            "paint": {"raster-opacity": 0.64}
+        }
     ]
   }
