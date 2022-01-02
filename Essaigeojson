@@ -1,0 +1,9 @@
+{
+    "sources": {
+      "Essaigeojson": {
+        "type": "geojson",
+        "data": "https://raw.githubusercontent.com/tceglar/heat/master/data/bigsample2.geojson"
+      }
+    },
+    
+  }
